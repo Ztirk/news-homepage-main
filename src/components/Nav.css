@@ -33,28 +33,34 @@
     align-items: center;
 }
 
+/* MEDIA ------------------------------------------------------------*/
+
 @media (max-width: 992px) {
     .navbar {
         display: flex;
         overflow: hidden;
         flex-direction: column;
-        color: hsl(236, 13%, 42%);
-        position: absolute;
+        color: hsl(240, 100%, 5%);
+        position: fixed;
+        top: 0;
         right: 0;
         background-color: white;
         width: 0%;
         height: 100%;
         transition: width 1s ease;
         justify-content: center;
+        align-items: center;
         z-index: 2;
+        font-size: 20px;
     }
 
     .fade {
         overflow: hidden;
         background-color: hsl(240, 100%, 5%);
-        z-index: 1;
-        position:absolute;
-        
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         opacity: 0%;
@@ -63,6 +69,7 @@
 
     .fade.faded {
         opacity: 50%;
+        display: flex;
     }
 
     .toggle {
@@ -70,6 +77,10 @@
         justify-content: end;
         align-items: center;
         z-index: 3;
+    }
+
+    .toggle .xmark {
+        position: fixed;
     }
 
     .navbar.expanded {

@@ -40,6 +40,7 @@
     padding: 15px 30px;
     letter-spacing: 5px;
     background-color: hsl(5, 85%, 63%);
+    z-index: -1;
 }
 
 .item3-2:hover {

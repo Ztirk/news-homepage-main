@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-import logo from '/news-homepage-main/assets/images/logo.svg'
 import './Nav.css'
-
+import logo from '../images/logo.svg'
 
 function Nav() {
   const [toggle, setToggle] = useState(false)

@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react'
-import image1 from '/news-homepage-main/assets/images/image-web-3-desktop.jpg'
-import './Head.css'
-import image2 from '/news-homepage-main/assets/images/image-retro-pcs.jpg'
-import image3 from '/news-homepage-main/assets/images/image-top-laptops.jpg'
-import image4 from '/news-homepage-main/assets/images/image-gaming-growth.jpg'
-import image5 from '/news-homepage-main/assets/images/image-web-3-mobile.jpg'
+import React, {useState, useEffect} from 'react';
+import image1 from '../images/image-web-3-desktop.jpg';
+import './Head.css';
+import image2 from '../images/image-retro-pcs.jpg';
+import image3 from '../images/image-top-laptops.jpg';
+import image4 from '../images/image-gaming-growth.jpg';
+import image5 from '../images/image-web-3-mobile.jpg';
 
 function Head() {
   const [img, setImg] = useState(image1)
@@ -14,15 +14,18 @@ function Head() {
   }, [])
 
   const handleImg = () => {
-    if (window.innerWidth <= '992px') {
+    const w = window.innerWidth;
+    if (w <= 600) {
       setImg(image5)
+    } else {
+      setImg(image1)
     }
   }
 
   return (
     <>
         <div className='head-container'>
-        <img className='item1' src={img}></img>
+            <img className='item1' src={img}></img>
 
             <div className='item2'>The Bright Future of Web 3.0?</div>
 
