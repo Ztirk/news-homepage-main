@@ -11,6 +11,7 @@ function Head() {
 
   useEffect(() => {
     window.addEventListener('load', handleImg)
+    window.addEventListener('resize', handleImg)
   }, [])
 
   const handleImg = () => {
