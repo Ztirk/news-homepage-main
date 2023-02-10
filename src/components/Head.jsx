@@ -10,7 +10,7 @@ function Head() {
   const [img, setImg] = useState(image1)
 
   useEffect(() => {
-    window.addEventListener('resize', handleImg)
+    window.addEventListener('load', handleImg)
   }, [])
 
   const handleImg = () => {
@@ -26,7 +26,6 @@ function Head() {
     <>
         <div className='head-container'>
             <img className='item1' src={img}></img>
-
             <div className='item2'>The Bright Future of Web 3.0?</div>
 
             <div className='item3'>
